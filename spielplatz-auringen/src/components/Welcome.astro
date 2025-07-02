@@ -1,0 +1,268 @@
+---
+import background from '../assets/background.svg';
+---
+
+<div id="container">
+	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	<main>
+		<section id="hero">
+			<div class="logo">
+				<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="30" cy="30" r="28" fill="#4CAF50" stroke="#2E7D32" stroke-width="2"/>
+					<path d="M20 25h20v2H20z" fill="#FFC107"/>
+					<circle cx="25" cy="35" r="3" fill="#FF5722"/>
+					<circle cx="35" cy="35" r="3" fill="#FF5722"/>
+					<path d="M22 42c0 0 3 4 8 4s8-4 8-4" stroke="#FF5722" stroke-width="2" fill="none"/>
+					<path d="M15 20l5-5 5 5" stroke="#8BC34A" stroke-width="2" fill="none"/>
+					<path d="M40 20l5-5 5 5" stroke="#8BC34A" stroke-width="2" fill="none"/>
+				</svg>
+				<h2>Spielplatz Auringen</h2>
+			</div>
+			<h1>
+				Willkommen in unserem <span class="highlight">Spielparadies</span> für kleine Entdecker!
+			</h1>
+			<p class="subtitle">
+				Ein sicherer Ort voller Abenteuer, wo Ihre Kinder spielen, lernen und neue Freunde finden können.
+			</p>
+			<section id="links">
+				<a class="button primary" href="#spielgeraete">Spielgeräte entdecken</a>
+				<a class="button secondary" href="#oeffnungszeiten">Öffnungszeiten</a>
+				<a class="button secondary" href="#anfahrt">Anfahrt & Kontakt</a>
+			</section>
+		</section>
+	</main>
+
+	<div id="features" class="box">
+		<div class="feature-grid">
+			<div class="feature">
+				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M16 4L20 12H28L22 18L24 26L16 22L8 26L10 18L4 12H12L16 4Z" fill="#FFD700"/>
+				</svg>
+				<h3>Sicherheit</h3>
+				<p>Regelmäßig gewartete Spielgeräte und weicher Fallschutz</p>
+			</div>
+			<div class="feature">
+				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<circle cx="16" cy="16" r="12" fill="#4CAF50"/>
+					<path d="M12 16l3 3 5-5" stroke="white" stroke-width="2"/>
+				</svg>
+				<h3>Für alle Altersgruppen</h3>
+				<p>Von Kleinkindern bis zu Schulkindern - für jeden ist etwas dabei</p>
+			</div>
+			<div class="feature">
+				<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M8 8h16v16H8z" fill="#2196F3"/>
+					<path d="M12 12h8v8h-8z" fill="white"/>
+				</svg>
+				<h3>Überdachte Sitzplätze</h3>
+				<p>Gemütliche Sitzgelegenheiten für Eltern und Betreuer</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(100px);
+		opacity: 0.3;
+	}
+
+	#container {
+		font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+		min-height: 100vh;
+		background: linear-gradient(135deg, #e8f5e8 0%, #f0f8ff 50%, #fff8e1 100%);
+	}
+
+	main {
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px;
+	}
+
+	#hero {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		max-width: 800px;
+	}
+
+	.logo {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		margin-bottom: 30px;
+	}
+
+	.logo h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: #2E7D32;
+		margin: 0;
+		text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+	}
+
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0 0 20px 0;
+		color: #1a1a1a;
+		line-height: 1.2;
+	}
+
+	.highlight {
+		background: linear-gradient(45deg, #4CAF50, #8BC34A);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.subtitle {
+		font-size: 1.3rem;
+		color: #666;
+		margin-bottom: 40px;
+		line-height: 1.6;
+		max-width: 600px;
+	}
+
+	#links {
+		display: flex;
+		gap: 20px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		padding: 15px 30px;
+		border-radius: 50px;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 1.1rem;
+		transition: all 0.3s ease;
+		border: 2px solid transparent;
+		min-width: 180px;
+	}
+
+	.button.primary {
+		background: linear-gradient(45deg, #4CAF50, #8BC34A);
+		color: white;
+		box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+	}
+
+	.button.primary:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 12px 35px rgba(76, 175, 80, 0.4);
+	}
+
+	.button.secondary {
+		background: white;
+		color: #4CAF50;
+		border-color: #4CAF50;
+	}
+
+	.button.secondary:hover {
+		background: #4CAF50;
+		color: white;
+		transform: translateY(-2px);
+	}
+
+	.box {
+		background: rgba(255, 255, 255, 0.95);
+		border-radius: 20px;
+		padding: 40px;
+		margin: 40px 20px;
+		box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(10px);
+	}
+
+	.feature-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 30px;
+	}
+
+	.feature {
+		text-align: center;
+		padding: 20px;
+	}
+
+	.feature svg {
+		margin-bottom: 15px;
+	}
+
+	.feature h3 {
+		font-size: 1.4rem;
+		font-weight: 600;
+		color: #2E7D32;
+		margin: 0 0 10px 0;
+	}
+
+	.feature p {
+		color: #666;
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	@media screen and (max-width: 768px) {
+		#container {
+			padding: 10px;
+		}
+
+		.logo h2 {
+			font-size: 2rem;
+		}
+
+		h1 {
+			font-size: 2.2rem;
+		}
+
+		.subtitle {
+			font-size: 1.1rem;
+		}
+
+		#links {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.button {
+			width: 100%;
+			max-width: 300px;
+		}
+
+		.feature-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.box {
+			margin: 20px 10px;
+			padding: 30px 20px;
+		}
+	}
+
+	@media screen and (max-width: 480px) {
+		h1 {
+			font-size: 1.8rem;
+		}
+
+		.logo h2 {
+			font-size: 1.6rem;
+		}
+
+		.subtitle {
+			font-size: 1rem;
+		}
+	}
+</style>
